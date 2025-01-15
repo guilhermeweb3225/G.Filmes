@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition:500ms;
 
     & > .box-login{
         width: 50%;
@@ -87,7 +88,8 @@
             }
     }
 }
-    & > .box-img{
+    & >
+    .box-img{
         width: 50%;
         height: 100%;
         background-image: url('../../public/img-fundo-filmes.png');
@@ -98,25 +100,20 @@
     }
     .box-login:hover{
         box-shadow: inset 0 0 0px black;
-    }.box-img:hover{
+    }
+    .box-img:hover{
         box-shadow: inset 0 0 0px black;
     }
+    #registrar{
+        text-decoration: none;
+        color: #727272;
+        font-size: 25px;
+        transition:500ms    ;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
 }
-@media screen and (max-width:750px){
-.box-primary{
-    .box-login{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-}
-    .box-img{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        filter:blur(5px);
-}
-}
+    #registrar:hover{
+        color: #c9c9c9;
+    }
 }

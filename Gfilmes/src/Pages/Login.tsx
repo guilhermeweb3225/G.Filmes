@@ -1,8 +1,7 @@
 import './Login.css'
-//import loginPng from '../../public/img-fundo-filmes.png'
-
+import {Link} from 'react-router-dom'
 function Login(){
-    return(
+   return(
         <>
         <section className="box-primary">
             <div className="box-login">
@@ -23,6 +22,7 @@ function Login(){
                         <a href="#">Forgot Password?</a>
                     </div>
                 </form>
+                <Link to="/registrar"id='registrar'>Registrar-se</Link>
             </div>
             <div className="box-img">
                 {/* <img src={loginPng} alt="Fundo Filmes" /> */}
