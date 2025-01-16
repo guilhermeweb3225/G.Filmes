@@ -1,0 +1,157 @@
+.box-primary-registro{
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    transition:500ms;
+    animation: visivelAnimation 500ms;
+
+    & > .box-registro{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: inset 0 0 20px black;
+        transition: 500ms;
+
+        & > .cabecalho-registro{
+            width: 300px;
+            font-size: 45px;
+            color: #aa3600;
+            text-align: left;
+            text-shadow: 0 0 10px #000000;
+        }
+
+        & > .box-inputs-registro{
+            width: 300px;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            transition: 500ms;
+
+
+            & > input[type="email"], input[type="password"] , input[type="text"]{
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                border-radius: 5px;
+                outline: none;
+                background-color: white;
+                color: var(--back2);
+}
+            & > input[type="email"]:hover,
+            input[type="password"]:hover,
+            input[type="text"]:hover{
+                background-color: #ffffffab;
+}
+
+            & > button{
+                width: 300px;
+                height: 40px;
+                border-radius:10px;
+                background-color: var(--back1);
+                color: var(--back2);
+                font-size: 20px;
+                border:none;
+                transition: 500ms;
+                cursor: pointer;
+}
+
+            & > button:hover{
+                background-color: #e738039d;
+                color: white;
+            }
+            & > .termos{
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+
+                & > a{
+                color: #1064ff;
+                margin-top:10px ;
+                text-decoration: none;
+                transition: 500ms;
+}
+                & > a > #termos{
+                    margin: 0 10px 0 0;
+                    accent-color: #48ff00;
+                }
+
+                & > a:hover{
+                    color: #830000;
+                }
+            }
+    }
+}
+    & > .box-img-registro{
+        width: 50%;
+        height: 100%;
+        background-image: url('../../public/img-fundo-filmes.png');
+        background-size: cover;
+        background-position: center;
+        box-shadow: inset 0 0 30px black;
+        transition: 500ms;
+    }
+    .box-registro:hover{
+        box-shadow: inset 0 0 0px black;
+    }.box-img-registro:hover{
+        box-shadow: inset 0 0 0px black;
+    }
+    #login{
+        text-decoration: none;
+        color: #727272;
+        font-size: 25px;
+        transition:500ms;
+        background-color: transparent;
+        border:none;
+        cursor: pointer;
+}
+    #login:hover{
+        color: #c9c9c9;
+    }
+}
+@media screen and (max-width:750px){
+.box-primary-registro{
+    .box-login{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+}
+    .box-img-registro{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter:blur(5px);
+}
+}
+}
+@media screen and (max-width:750px){
+    #box-primary{
+        .box-login{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+    }
+        .box-img{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter:blur(5px);
+    }
+    }
+    }
