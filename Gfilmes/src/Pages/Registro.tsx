@@ -6,12 +6,13 @@ function Registro(){
         <section className="box-primary-registro">
             <div className="box-registro">
                 <h1 className='cabecalho-registro'>Registrar-se</h1>
-                    <form action="" className="box-inputs-registro">
-                    <input type="text" placeholder="Username" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <input type="text" placeholder="Location" />
-                    <button type="submit"className='button-login'>Login</button>
+                    <form action="https://api.sheetmonkey.io/form/gV9JDi5HFmL7uvxn2vfyWG" method="post" className="box-inputs-registro">
+                    <input type="text"name="Name" placeholder="Username" required/>
+                    <input type="email"name='Email' placeholder="Email" required/>
+                    <input type="password"name='senha' placeholder="Password"required />
+                    <input type="text"name='localidade' placeholder="Location" required/>
+                    <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+                    <button type="submit">Registrar-se</button>
                     <div className="termos">
                         <a href="#" >
                             <input

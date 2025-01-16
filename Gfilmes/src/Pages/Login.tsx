@@ -9,7 +9,9 @@ function Login(){
                 <form action="" className="box-inputs">
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
-                    <button type="submit"className='button-login'>Login</button>
+                    <Link to='/home'className='button-login'>
+                        <button type="submit">Login</button>
+                    </Link>
                     <div className="termos">
                         <a href="#" >
                             <input

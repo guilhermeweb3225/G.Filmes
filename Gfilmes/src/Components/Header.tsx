@@ -1,11 +1,12 @@
 import './Header.css'
 import { Link } from 'react-router-dom'
+import GfilmesLogo from '../assets/imgs/logo-gfilmes.png'
 
 function Header(){
     return(
         <header>
             <div className="img-procura">
-                <h1 className='logoName'>G.Filmes</h1>
+                <img src={GfilmesLogo} />
             </div>
             <div className="janelas">
                 <input type="search" placeholder='Procurar'className='procurar'/>

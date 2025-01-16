@@ -14,8 +14,8 @@ main{
 
     & > .telao{
         width: 100%;
-        height: 90vh;
-        margin-top: 100px;
+        height: 100vh;
+        margin-top: 0px;
         background-color: black;
 
         & > img{
@@ -118,4 +118,31 @@ main{
         }
     }
 
+}
+@media screen and (max-width:300px) {
+    main{
+        & >.telao{
+            margin-top: 10px;
+        }
+        & > .streaming{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            box-shadow: -2px -5px 10px;
+            margin-bottom: 10px;
+
+            & > .logo-streaming{
+                width: 100%;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                overflow: hidden;
+    
+                & > img{
+                    width: 30px;
+                }
+            }
+        }
+    }
 }
