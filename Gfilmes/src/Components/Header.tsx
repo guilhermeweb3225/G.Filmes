@@ -5,7 +5,7 @@ function Header(){
     return(
         <header>
             <div className="img-procura">
-                <h1>G.Filmes</h1>
+                <h1 className='logoName'>G.Filmes</h1>
             </div>
             <div className="janelas">
                 <input type="search" placeholder='Procurar'className='procurar'/>

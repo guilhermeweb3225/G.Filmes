@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+
+    & > .telao{
+        width: 100%;
+        height: 90vh;
+        margin-top: 100px;
+        background-color: black;
+
+        & > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+}
+
+    & > .streaming{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #000000;
+        box-shadow: -8px -15px 30px;
+        margin-bottom: 100px;
+
+        & > .logo-streaming{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            overflow: hidden;
+
+            & > img{
+                width: 100px;
+            }
+        }
+    }
+    & > .filmes-series{
+        width: 100%;
+        height: auto;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 -10px 20px black;
+
+        h2{
+            width: 100%;
+            height: 25px;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #ff3c00;
+            padding-left: 20px;
+        }
+
+        & > .em-alta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin: 90px;
+
+            & > .box-primary-filmes{
+                box-shadow: inset 0 0 15px black;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border-radius: 5px;
+                background-color: rgb(26, 26, 26);
+                &>.filme{
+                    width: auto;
+                    height: 350px;
+                    margin: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    transition: 500ms;
+                    font-size: 16px;
+                    background-color: #00000088;
+                    padding: 20px;
+                    border-radius: 5px;
+                    color: white;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    &>img{
+                    width: 155px;
+                    height: 235px;
+                    object-fit: cover;
+                    }
+
+                }
+                &>.filme:hover{
+                    transform: scale(1.05);
+                    border: 2px solid var(--back1);
+                }
+            }
+        }
+    }
+
+}

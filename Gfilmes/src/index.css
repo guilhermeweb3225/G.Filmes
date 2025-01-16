@@ -1,12 +1,12 @@
 @font-face {
-  font-family: fontNetflix;
-  src: url('../src/assets/fonts/BebasNeue-Regular.eot');
+  font-family: "fontNetflix";
+  src: url('../src/assets/fonts/BebasNeue-Regular.ttf') format(truetype);
 }
 :root{
   --back1:#fd5000;
   --back2:#1a1a1a;
   --color1:#aa3600;
-  --font1:fontNetflix;
+  --font1:"fontNetflix";
 }
 body{
   background-color: #2b2b2b;
