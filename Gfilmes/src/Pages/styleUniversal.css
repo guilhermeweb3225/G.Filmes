@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+
+    & > .streaming{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #000000;
+        box-shadow: -8px -15px 30px;
+        margin: 100px 0;
+
+        & > .logo-streaming{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            overflow: hidden;
+
+            & > img{
+                width: 100px;
+                filter: drop-shadow( inset 0 5px #000000);
+                transition:500ms;
+}
+            & > img:hover{
+                filter: drop-shadow(0 0 5px #ffffff);
+                border-radius: 100%;
+}
+}
+    }
+    & > .cine{
+        width: 95%;
+        height: auto;
+        background-color: #000000;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(6,auto);
+
+        &>.filme{
+            width: 220px;
+            height: 350px;
+            margin: 10px 0;
+            display: flex;
+            transition: 500ms;
+            justify-content: center;
+            background-color: #00000093;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            &>img{
+            transition: 500ms;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            }
+            & > .informacao-filmes{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 0px;
+                position: absolute;
+                bottom: 2px;
+                transition: 500ms;
+
+                &>.name-filme,.ano-lancamento{
+                    font-size: 0;
+                    opacity: 0;
+                    transition: 500ms;
+}
+            }
+
+        }
+        &>.filme:hover{
+            transform: scale(1.05);
+            & >img{
+                border: 2px solid var(--back1);
+                filter:blur(1px);
+}
+            & > .informacao-filmes{
+                display: flex;
+                width: 98%;
+                height: 100px;
+                position: absolute;
+                bottom: 2px;
+                border-radius: 5px;
+                background-color: #000000b0;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                &>h3{
+                    display: block;
+                    font-size: 20px;
+                    opacity: 1;
+                }
+
+                & > P{
+                    display: block;
+                    font-size: 16px;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+}
+/* Estilo responsivo para "main > .cine" com várias quebras de mídia */
+
+@media screen and (max-width: 1500px) {
+    main > .cine {
+        grid-template-columns: repeat(4, auto); /* Ajusta o layout para 4 colunas */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main > .streaming >.logo-streaming {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px; /* Espaço entre itens */
+
+    & > img {
+        width: 100px;
+        filter: drop-shadow(inset 0 5px #000000);
+        transition: 500ms;
+    }
+
+    & > img:hover {
+        filter: drop-shadow(0 0 5px #ffffff);
+        border-radius: 100%;
+    }
+
+    /* Estilização para a pirâmide */
+    & > img:nth-child(1) {
+        grid-row: 1;
+    }
+
+    & > img:nth-child(2),
+    & > img:nth-child(3) {
+        grid-row: 2;
+    }
+
+    & > img:nth-child(4),
+    & > img:nth-child(5),
+    & > img:nth-child(6) {
+        grid-row: 3;
+    }
+
+    & > img:nth-child(7),
+    & > img:nth-child(8),
+    & > img:nth-child(9),
+    & > img:nth-child(10) {
+        grid-row: 4;
+    }
+}
+
+}
+
+@media screen and (max-width: 1000px) {
+    main > .cine {
+        grid-template-columns: repeat(3, auto); /* Mantém 3 colunas */
+
+        & > .filme {
+            width: 150px;
+            height: 250px;
+            margin: 10px;
+            font-size: 16px; /* Define tamanho padrão de fonte */
+
+            & > img {
+                width: 100%;
+                height: 210px; /* Ajusta a imagem ao container */
+            }
+
+            & > h3 {
+                font-size: 14px; /* Define o tamanho do título */
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main > .cine {
+        grid-template-columns: repeat(5, auto); /* Alternativa para 5 colunas */
+        justify-items: center; /* Centraliza os itens na grade */
+
+        & > .filme {
+            width: 150px;
+            height: 230px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-direction: column;
+            transition: 500ms; /* Suaviza as transições */
+            font-size: 16px;
+            background-color: #1b1b1b93;
+            padding: 0;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            border: 2px solid transparent;
+
+            & > img {
+                transition: 500ms;
+                width: 100%;
+                height: 230px;
+                object-fit: cover;
+                border-radius: 10px;
+                border: 2px solid transparent; /* Borda invisível para hover */
+            }
+
+            & > .informacao-filmes {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 0;
+                position: absolute;
+                bottom: 2px;
+                transition: 500ms; /* Suaviza as mudanças de estilo */
+
+                & > .name-filme, .ano-lancamento {
+                    font-size: 0;
+                    opacity: 0; /* Torna invisível por padrão */
+                    transition: 500ms;
+                }
+            }
+        }
+
+        & > .filme:hover {
+            transform: scale(1.05); /* Aumenta ligeiramente no hover */
+
+            & > img {
+                border: 2px solid var(--back1);
+                filter: blur(1px); /* Adiciona um leve desfoque */
+            }
+
+            & > .informacao-filmes {
+                & > h3 {
+                    font-size: 12px; /* Ajusta o tamanho do texto */
+                }
+
+                & > p {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    main > .cine {
+        grid-template-columns: repeat(4, auto); /* Reduz para 4 colunas */
+        justify-items: center; /* Centraliza os itens */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main > .cine {
+        grid-template-columns: repeat(3, auto); /* Mantém 3 colunas */
+        justify-items: center;
+
+        & > .filme {
+            width: 125px;
+            height: 215px; /* Reduz o tamanho dos filmes */
+            justify-content: start;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main > .cine {
+        & > .filme {
+            width: 100px;
+            height: 150px; /* Ajusta para dispositivos menores */
+        }
+
+        & > .filme:hover {
+            & > .informacao-filmes {
+                height: 50px;
+
+                & > h3 {
+                    font-size: 10px; /* Texto reduzido */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 321px) {
+    main > .cine {
+        grid-template-columns: repeat(2, auto); /* Duas colunas em dispositivos muito pequenos */
+    }
+}
+
+@media screen and (max-width: 300px) {
+    main > .streaming {
+        margin: 30px 0;
+        height: 40px; /* Ajuste visual para streaming */
+        margin-bottom: 40px;
+    }
+
+    main > .cine {
+        grid-template-columns: repeat(3, auto); /* Três colunas reduzidas */
+        justify-items: center;
+
+        .filme {
+            width: 50px;
+            height: 100px; /* Miniaturas menores */
+            margin: 2px;
+            display: flex;
+            align-items: center;
+            transition: 500ms;
+            font-size: 10px; /* Texto reduzido */
+        }
+    }
+}

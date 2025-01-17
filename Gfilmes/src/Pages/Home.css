@@ -84,13 +84,13 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                overflow: hidden;
+                overflow: scroll;
                 border-radius: 5px;
-                background-color: rgb(26, 26, 26);
+                background-color: #1a1a1a;
                 &>.filme{
                     width: auto;
                     height: 350px;
-                    margin: 10px;
+                    margin: 0px 10px;
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
@@ -98,7 +98,7 @@ main{
                     transition: 500ms;
                     font-size: 16px;
                     background-color: #00000088;
-                    padding: 20px;
+                    padding: 10px;
                     border-radius: 5px;
                     color: white;
                     cursor: pointer;
@@ -107,6 +107,9 @@ main{
                     width: 155px;
                     height: 235px;
                     object-fit: cover;
+                    }
+                    & > h3{
+                        font-size: 100%;
                     }
 
                 }
@@ -118,6 +121,13 @@ main{
         }
     }
 
+}
+
+@media screen and (max-width:768px) {
+    .filme{
+        width: 120px;
+        padding: 0;
+    }
 }
 @media screen and (max-width:300px) {
     main{

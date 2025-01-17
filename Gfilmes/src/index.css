@@ -2,6 +2,10 @@
   font-family: "fontNetflix";
   src: url('../src/assets/fonts/BebasNeue-Regular.ttf') format(truetype);
 }
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}
 :root{
   --back1:#fd5000;
   --back2:#1a1a1a;
