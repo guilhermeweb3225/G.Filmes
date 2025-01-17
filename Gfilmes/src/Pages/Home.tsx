@@ -2,14 +2,13 @@ import './Home.css'
 import Header from '../Components/Header.tsx'
 import LogoDisney from '../assets/imgs/logo-disney.png'
 import LogoNetflix from '../assets/imgs/logo-netflix.png'
+import Slide from '../Components/slide.tsx'
 function Home(){
     return(
         <>
         <Header/>
+        <Slide/>
         <main className='corpo'>
-            <section className='telao'>
-            <img src="https://wallpapers.com/images/featured/alice-in-borderland-79olr58iub9u7zbl.jpg"/>
-            </section>
             <section className='streaming'>
                 <h2>Streaming</h2>
                 <div className="logo-streaming">
